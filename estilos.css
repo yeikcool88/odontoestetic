@@ -1,0 +1,194 @@
+/*
+Colores 	Primario
+Naranja		#fa6c00
+Morado		#6c00fa
+Verde		#00fa6c
+*/
+body {
+	background-color: #fdf9ff;
+	color: white;
+}
+h2 {
+	margin-bottom: 0;
+}
+.none {
+	opacity: 0;
+}
+.col {
+	flex-basis: auto;
+	flex-grow: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+.menu {
+	overflow: hidden;
+	background-color: #fff;
+	margin-bottom: 5px;
+	box-shadow: 0 0px 5px black;
+}
+.navbar {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.navbar-brand {
+	margin-right: 0;
+}
+.navbar-nav .nav-link {
+	transition: all .3s linear;
+	line-height: 50px;
+	width: 90px;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+	background: #f06511;
+	color: white;
+}
+.titulo {
+	max-width: 1140px;
+	margin: 0 auto;
+	border-radius: 10px;
+	border: 1px solid #999;
+	overflow: auto;
+}
+.titulo-txt {
+	margin: 8% auto;
+	padding: 2% 0;
+	color: #fa6c00;
+	font-size: 4.5em;
+	font-weight: bold;
+	text-align: center;
+	background: radial-gradient(circle, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, 0));
+	text-shadow: 0px 0px 2px rgba(0,0,0, 1), 2px -2px 4px rgba(0,0,0, 1), 2px -2px 4px rgba(0,0,0, 1);
+}
+.contenido {
+	margin: 0 auto;
+	justify-content: center;
+	background: #fff url("imagenes/fondo2.png") repeat center center;
+}
+.mapa {
+	display: block;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+	border: 0;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .6);
+}
+footer {
+	overflow: auto;
+	background: #fe8c00;
+	background: -webkit-linear-gradient(to bottom, #fe8c00, #f83600);
+	background: linear-gradient(to bottom, #fe8c00, #f83600);
+	border-top: 3px solid #C1510C;
+	margin-top: 5px;
+	box-shadow: 0 0px 5px black;
+	/*box-shadow: 0 -2px 4px rgba(0, 0, 0, .3);*/
+}
+footer > div.row {
+	max-width: 820px;
+	margin: 10px auto;
+}
+footer .fa-circle {
+	color: #6c00fa;
+}
+#cr {
+	margin-bottom: 3px;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-align: center;
+	background: linear-gradient(rgba(219,47,0,0), rgba(219,47,0,.3), rgba(219,47,0,0));
+}
+@media screen and (max-width: 991px) {
+	footer > div.row {
+		max-width: 550px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.navbar-nav .nav-link {
+		line-height: 40px;
+		width: 100%;
+	}
+	.titulo {
+		font-size: 16px;
+	}
+	.jumbotron, .carousel-caption{
+		font-size: 15px;
+		padding: 1rem 1rem;
+	}
+	.display-3 {
+		font-size: 3.6em;
+	}
+	.lead {
+		font-size: 1.25em;
+	}
+	.my-4 {
+		margin-top: 1em !important;
+		margin-bottom: 1em !important;
+	}
+	.postal {
+		font-size: 12px;
+		height: 380px;
+	}
+}
+@media screen and (max-width: 575px) {
+	#logo {
+		height: 80px;
+	}
+	.titulo, .jumbotron, .circulo, .carousel-caption {
+		font-size: 14px;
+	}
+	.titulo-txt {
+		margin-top: 6%;
+		margin-bottom: 6%;
+	}
+	#diente {
+		display: none;
+	}
+	.postal {
+		font-size: 9px;
+		height: 260px;
+	}
+	.postal-txt {
+		width: 70%;
+		padding: 10px;
+	}
+	.circulo {
+		height: 380px;
+		width: 380px;
+	}
+	footer > div.row {
+		max-width: 280px;
+	}
+}
+@media screen and (max-width: 400px) {
+	#logo {
+		height: 50px;
+	}
+	.titulo, .jumbotron, .circulo, .carousel-caption {
+		font-size: 12px;
+	}
+	.titulo-txt {
+		font-size: 3.7em;
+	}
+	.postal {
+		height: 180px;
+	}
+	.postal-txt {
+		width: 100%;
+		padding: 5px;
+	}
+	.postal-txt h2 {
+		margin: 0;
+		font-size: 2em;
+	}
+	.postal-txt p {
+		font-size: 1.4em;
+	}
+	.bgservicio {
+		height: 210px;
+	}
+	.circulo {
+		height: 280px;
+		width: 280px;
+	}
+}
