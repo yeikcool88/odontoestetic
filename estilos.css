@@ -1,0 +1,523 @@
+/*GENERAL*/
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #ffffff;
+  color: #ffffff;
+  background: #fff url("imagenes/fondo.png") repeat center center;
+  padding-bottom: 0 !important;
+}
+a,
+button {
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+button:focus {
+  outline: none;
+}
+.none {
+  opacity: 0;
+}
+#st_gdpr_iframe {
+  border: 0;
+}
+#st-2 .st-btn,
+#st-2 .st-toggle {
+  width: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #fa6c00 !important;
+}
+/*MENU*/
+#menu,
+.navbar,
+.huevo {
+  transition: all 1s ease;
+}
+#menu {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: #fa6c00;
+  box-shadow: 0 1px 5px #000;
+  line-height: 1;
+}
+#menu button.nav-item {
+  border: 0;
+  background-color: transparent;
+  min-width: 120px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.7rem;
+  color: #ffffff;
+  text-align: center;
+}
+#menu button.nav-item:hover {
+  background: #ffffff;
+  color: #fa6c00;
+}
+#menu .logo-box {
+  width: calc(540px - 540px*0.2 - 2rem);
+  text-align: center;
+}
+#menu .logo-box img {
+  height: 2.7rem;
+}
+#menu .huevo {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 540px;
+  height: 300px;
+  border-radius: 50%;
+  -webkit-transform: translate(-10%, -50%);
+          transform: translate(-10%, -50%);
+  box-shadow: 0 1px 5px #000;
+  padding: 5px;
+  overflow: hidden;
+}
+#menu .huevo::before {
+  z-index: -1;
+  -webkit-animation: borde 5s ease-in-out infinite;
+          animation: borde 5s ease-in-out infinite;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fa6c00;
+}
+#menu .huevo .img-box {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+#menu .huevo .logo {
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#menu .mini-menu {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 100px;
+}
+#menu .mini-menu button {
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 0;
+}
+#menu .mini-menu button img {
+  -webkit-animation: escala 5s ease-in-out infinite;
+          animation: escala 5s ease-in-out infinite;
+}
+#menu .mini-menu img {
+  height: 2.5rem;
+}
+#menu .mini-menu > img {
+  margin-top: auto;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+#menu.menu-fixed {
+  background-color: #fff;
+}
+#menu.menu-fixed .huevo {
+  -webkit-transform: translate(-10%, -100%);
+          transform: translate(-10%, -100%);
+  box-shadow: none;
+}
+#menu.menu-fixed .navbar {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+#menu.menu-fixed .navbar button.nav-item {
+  color: #fa6c00;
+}
+#menu.menu-fixed .navbar button.nav-item:hover {
+  background: #fa6c00;
+  color: #ffffff;
+}
+#portada {
+  width: 100%;
+  margin-top: 3rem;
+}
+/*TITULOS*/
+.titulo {
+  border-radius: 10px;
+  border: 1px solid #999;
+  overflow: auto;
+  margin-bottom: 30px;
+}
+.titulo .titulo-txt {
+  margin: 8% auto;
+  padding: 2% 0;
+  color: #fa6c00;
+  font-size: 4.7rem;
+  font-weight: bold;
+  text-align: center;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0));
+  text-shadow: 0px 0px 2px #000000, 2px -2px 4px #000000, 2px -2px 4px #000000;
+}
+#servicios {
+  background: url("imagenes/servicios/rayosx.jpg") center center / 100% no-repeat;
+}
+#contacto {
+  background: url("imagenes/contacto/cita.jpg") center center / 100% no-repeat;
+}
+/*POSTAL*/
+.jumbotron {
+  position: relative;
+  background: #fe8c00;
+  background: linear-gradient(to right, #fe8c00, #f83600);
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+.jumbotron .lead {
+  text-align: justify;
+}
+.jumbotron .diente {
+  max-width: 160px;
+  width: 100%;
+}
+.jumbotron p.jumbol {
+  font-weight: bold;
+}
+/*SERVICIOS*/
+.servicio {
+  max-width: 600px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+.servicio h2 {
+  padding: 2% 0;
+  font-size: 2.7rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 3px #000, 0 -3px #000, 3px 0 #000, -3px 0 #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
+  background-color: #60fca3;
+  margin-bottom: 0;
+}
+.servicio .servicio-img {
+  width: 100%;
+  height: 300px;
+  background-color: #fca360;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#general-img {
+  background-image: url("imagenes/servicios/general.jpg");
+}
+#rehabilitacion-img {
+  background-image: url("imagenes/servicios/rehabilitacion.jpg");
+}
+#ortodoncia-img {
+  background-image: url("imagenes/servicios/ortodoncia.jpg");
+}
+#endodoncia-img {
+  background-image: url("imagenes/servicios/endodoncia.jpg");
+}
+#periodoncia-img {
+  background-image: url("imagenes/servicios/periodoncia.jpg");
+}
+#cirugia-img {
+  background-image: url("imagenes/servicios/cirugia.jpg");
+}
+#estetica-img {
+  background-image: url("imagenes/servicios/estetica.jpg");
+}
+#diseno-img {
+  background-image: url("imagenes/servicios/diseno.jpg");
+}
+/*CONTACTO*/
+.circulo {
+  display: table;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 5px solid #6a3093;
+  box-shadow: 0 0 5px black;
+}
+.circulo span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0 15px #000000, 0 0 10px #000000, 0 0 10px #000000, 0 0 5px #000000, 0 0 5px #000000;
+}
+#hora {
+  background: url("imagenes/contacto/reloj.jpg") center center / 100% no-repeat;
+}
+#direccion {
+  background: url("imagenes/contacto/mapa.jpg") center center / 100% no-repeat;
+}
+#telefono {
+  background: url("imagenes/contacto/celular.jpg") center center / 100% no-repeat;
+}
+#mapa {
+  display: block;
+  width: 100%;
+  border: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+}
+/*FOOTER*/
+footer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  overflow: auto;
+  background: #fe8c00;
+  background: linear-gradient(to bottom, #fe8c00, #f83600);
+  border-top: 3px solid #C1510C;
+  margin-top: 5px;
+  box-shadow: 0 0px 5px black;
+  text-align: center;
+}
+footer .container {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+footer .row {
+  padding-top: 5px;
+}
+footer .row .col-12 {
+  margin-bottom: 5px;
+}
+footer .fa-circle {
+  color: #6c00fa;
+}
+footer .cr {
+  margin-bottom: 3px;
+  font-size: 0.8em;
+  font-weight: bold;
+  background: linear-gradient(rgba(219, 47, 0, 0), rgba(219, 47, 0, 0.3), rgba(219, 47, 0, 0));
+}
+@-webkit-keyframes borde {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes borde {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes escala {
+  80% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  85% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  90% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  95% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+@keyframes escala {
+  80% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  85% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  90% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  95% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+@media (max-width: 1199px) {
+  #menu .huevo {
+    width: 510px;
+    height: 310px;
+  }
+  #menu .logo-box {
+    width: calc(510px - 510px*0.2 - 2rem);
+  }
+  .circulo {
+    width: 450px;
+    height: 450px;
+  }
+  .circulo span {
+    font-size: 2.4rem;
+  }
+  footer {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 991px) {
+  #menu .huevo {
+    width: 340px;
+    height: 210px;
+  }
+  #menu .huevo .logo {
+    height: 65px;
+  }
+  #menu .logo-box {
+    width: calc(340px - 340px*0.2 - 2rem);
+  }
+  #menu button.nav-item {
+    font-size: 1.4rem;
+  }
+  .servicio h2 {
+    font-size: 2rem;
+  }
+  #hora,
+  #direccion {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  #st-2.esconder {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  #menu .huevo {
+    width: 240px;
+    height: 150px;
+  }
+  #menu .huevo .logo {
+    height: 44px;
+  }
+  #menu .logo-box {
+    width: calc(240px - 240px*0.2 - 2rem);
+  }
+  #menu button.nav-item {
+    font-size: 1.1rem;
+    min-width: auto;
+  }
+  .jumbotron .display-3 {
+    font-size: 3.4rem;
+  }
+  .jumbotron .lead {
+    font-size: 1.1rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+  footer .container {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  footer .col-sm-6 {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .servicio h2 {
+    font-size: 2.7rem;
+  }
+}
+@media (max-width: 575px) {
+  #menu .huevo,
+  #menu .logo-box {
+    display: none;
+  }
+  #menu .mini-menu {
+    display: flex;
+  }
+  #menu-items {
+    padding-top: 0.15rem;
+  }
+  #portada {
+    margin-top: 3.5rem;
+  }
+  .jumbotron .display-3 {
+    font-size: 3.2rem;
+  }
+  .titulo .titulo-txt {
+    font-size: 3.7rem;
+  }
+  .servicio h2 {
+    font-size: 2.3rem;
+  }
+  .servicio .servicio-img {
+    height: 250px;
+  }
+  .circulo {
+    width: 370px;
+    height: 370px;
+  }
+  .circulo span {
+    font-size: 2.5rem;
+  }
+  footer .container {
+    max-width: 260px;
+  }
+}
+@media (max-width: 400px) {
+  .jumbotron .display-3 {
+    font-size: 2.3rem;
+  }
+  .jumbotron .lead {
+    font-size: 1rem;
+  }
+  .titulo .titulo-txt {
+    font-size: 2.7rem;
+  }
+  .servicio h2 {
+    font-size: 1.5rem;
+    text-shadow: 0 2px #000, 0 -2px #000, 2px 0 #000, -2px 0 #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  }
+  .servicio .servicio-img {
+    height: 200px;
+  }
+  .circulo {
+    width: 270px;
+    height: 270px;
+  }
+  .circulo span {
+    font-size: 1.8rem;
+  }
+}
